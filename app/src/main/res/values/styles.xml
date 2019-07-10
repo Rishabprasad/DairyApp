@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">#ff0000</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
     </style>
     <style name="RoundedCornerMaterialButton">
         <item name="android:background">@drawable/rounded_shape</item>
