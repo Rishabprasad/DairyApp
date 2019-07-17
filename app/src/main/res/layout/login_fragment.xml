@@ -27,7 +27,7 @@
             android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"/>
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/editmobile"
