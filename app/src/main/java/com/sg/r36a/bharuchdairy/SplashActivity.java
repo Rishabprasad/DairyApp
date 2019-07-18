@@ -9,20 +9,31 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
+import static androidx.core.content.res.ResourcesCompat.getFont;
+
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int SPLASH_TIME_OUT = 4000;
     ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Typeface typeface = ResourcesCompat.getFont(this, R.font.blacklist);
+        Typeface typeface = Typeface.createFromAsset(getResources().getAssets(),"fonts/blacklist.ttf");
+        //Typeface typeface = getFont(this, R.fonts.blacklist);
         imageView = findViewById(R.id.logo);
         TextView appname= findViewById(R.id.appname);
         appname.setTypeface(typeface);
 
+        YoYo.with(Techniques.Bounce)
+                .duration(7000)
+                .playOn(findViewById(R.id.logo));
 
-
+        YoYo.with(Techniques.FadeInUp)
+                .duration(4000)
+                .playOn(findViewById(R.id.appname));
         new Handler().postDelayed(new Runnable() {
 
             /*
